@@ -20,6 +20,7 @@
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
+
 }
 .button-64:active,
 .button-64:hover {
@@ -45,11 +46,17 @@
     min-width: 196px;
   }
 }
+
 .p {
   color: ;
-  font-family: 'Mona Sans';
-  
+  font-family:fantasy;
+  font-size: 150%;
+
+
 }
+
 .h1 {
   font-family:monospace;
+  font-size:300%;
+
 }
