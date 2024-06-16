@@ -47,6 +47,10 @@
 }
 .p {
   color: ;
+  font-family: 'Mona Sans';
+  src:
+    url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('Mona-Sans.woff2') format('woff2-variations');
   
 }
 .h1 {
