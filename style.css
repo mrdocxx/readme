@@ -55,8 +55,8 @@
 }
 
 .h1 {
-font-family: system-ui;
-font-size:300%;
+  font-family:monospace;
+  font-size:300%;
 
 }
 body{
@@ -290,8 +290,14 @@ span{
 				-webkit-transform: rotate(359deg);
 		}
 }
-
-
+.sm_icon{
+ 
+	width: 50px;
+	/* the height is adjusted automatically*/
+  }
+.icons{
+	text-align: center;
+}
 
 
 
