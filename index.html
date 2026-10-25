@@ -1,119 +1,174 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      body {
-      background-color: lightgrey;
-        }
-    </style>
-    <link rel="stylesheet" href="https://mrdocxx.github.io/readme/style.css" >
-  </head>
-  <body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f3">
+  <meta name="description" content="A little pocket of sunshine, made just for you.">
+  <title>A Little Something for You ♡</title>
+  <style>
+    :root{--ink:#382c43;--muted:#756a7e;--rose:#e77d91;--pink:#f9dce2;--cream:#fff8f3;--lav:#eee7fb;--green:#dce9d9;--white:#fff;--shadow:0 18px 50px #67465b1c}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+    button{font:inherit;color:inherit}a{color:inherit}.wrap{width:min(1080px,calc(100% - 36px));margin:auto}
+    .hero{min-height:570px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;padding:70px 18px 78px;background:radial-gradient(ellipse at 50% 110%,#f4bdc9 0,transparent 45%),linear-gradient(180deg,#f9e8ec,#fff8f3 78%)}
+    .hero:before,.hero:after{content:"✿";position:absolute;color:#e994a4;opacity:.25;font-size:150px;line-height:1;pointer-events:none}.hero:before{top:40px;left:5%;transform:rotate(-18deg)}.hero:after{right:5%;bottom:34px;font-size:190px;transform:rotate(17deg)}
+    .hero-inner{max-width:720px;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #eacbd2;border-radius:99px;padding:6px 14px;background:#fff9;font-size:.86rem;color:#805867;letter-spacing:.04em}
+    h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(3rem,8vw,6rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 18px}h1 em{color:#cf687f;font-weight:400}.lead{max-width:560px;margin:0 auto;color:var(--muted);font-size:clamp(1rem,2.4vw,1.2rem)}
+    .button{border:0;border-radius:99px;background:var(--ink);color:white;padding:13px 21px;cursor:pointer;box-shadow:0 8px 18px #382c4324;transition:transform .2s,box-shadow .2s}.button:hover{transform:translateY(-2px);box-shadow:0 12px 22px #382c4330}.button:focus-visible,.soft-button:focus-visible,.tile:focus-visible{outline:3px solid #cf687f;outline-offset:3px}.hero .button{display:inline-flex;align-items:center;margin-top:42px;background:#cf687f}.scroll-hint{display:block;margin-top:29px;color:#8e7883;font-size:.85rem}
+    section{padding:76px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 34px}.kicker{color:#c26177;text-transform:uppercase;letter-spacing:.15em;font-size:.76rem;font-weight:750}.section-head h2{font:500 clamp(2rem,5vw,3.1rem)/1.1 Georgia,serif;margin:10px 0}.section-head p{color:var(--muted);margin:10px 0 0}
+    .note-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.note{background:var(--white);padding:25px 24px;border-radius:22px;box-shadow:var(--shadow);border:1px solid #f2e8e6;min-height:190px;position:relative;overflow:hidden}.note:after{content:"♡";position:absolute;right:15px;bottom:-23px;font-size:84px;color:#f9e6e9;line-height:1}.note .emoji{font-size:1.5rem}.note p{position:relative;z-index:1;margin:14px 0 0;font:1.05rem/1.55 Georgia,serif}.note:nth-child(3n+2){background:#fff9f0}.note:nth-child(3n){background:#f6f1fc}
+    .memories{background:#fffdf9}.timeline{max-width:760px;margin:auto;position:relative;display:grid;gap:16px}.timeline:before{content:"";position:absolute;left:25px;top:20px;bottom:20px;width:2px;background:#efcbd3}.memory{position:relative;margin-left:58px;padding:22px 25px;border:1px solid #f1e4e2;border-radius:20px;background:#fff;box-shadow:0 10px 30px #67465b10}.memory:before{content:"♡";position:absolute;left:-48px;top:22px;width:28px;height:28px;display:grid;place-items:center;border-radius:50%;background:#f9dce2;color:#c26177}.memory h3{font:500 1.35rem Georgia,serif;margin:0 0 7px}.memory p{margin:0;color:var(--muted)}.memory-hint{text-align:center;color:#8b7e88;font-size:.9rem;margin-top:20px}
+    .play{background:linear-gradient(135deg,#f7e8ed,#f2edfb 60%,#edf4eb)}.game-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.game{background:#fff;border-radius:25px;padding:28px;box-shadow:var(--shadow);border:1px solid #ffffffb8}.game h3{font:500 1.7rem Georgia,serif;margin:0 0 8px}.game p{margin:0;color:var(--muted)}.flower-row{display:flex;gap:12px;justify-content:center;margin:26px 0 18px}.flower{border:0;background:#fff3f5;border-radius:18px;width:70px;height:70px;font-size:2rem;cursor:pointer;transition:transform .2s,background .2s}.flower:hover{transform:rotate(-8deg) scale(1.08);background:#ffe5ea}.result{min-height:54px;text-align:center;padding:10px 5px;color:#8a5261;font-weight:650}
+    .game-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.score{background:#f8eef2;padding:5px 12px;border-radius:99px;font-size:.88rem;color:#885568}.heart-field{height:155px;position:relative;margin-top:18px;border-radius:18px;background:radial-gradient(ellipse at 50% 100%,#f7e0e5,#fff8f5);overflow:hidden}.catch-heart{position:absolute;border:0;background:transparent;font-size:2rem;cursor:pointer;animation:pop .5s ease both}.catch-heart:hover{transform:scale(1.2)}@keyframes pop{from{transform:scale(.2);opacity:0}to{transform:scale(1);opacity:1}}.game-actions{display:flex;justify-content:center;margin-top:14px}.soft-button{border:1px solid #ecd3d8;border-radius:99px;background:#fff8;padding:9px 15px;cursor:pointer;color:#795665}.catch-status{text-align:center;min-height:25px;margin-top:10px!important;font-size:.9rem}
+    .mood-row{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:22px 0 10px}.mood[aria-pressed="true"]{background:#f9dce2;border-color:#e7a7b4}.memory-board{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:20px 0 12px}.memory-card{height:70px;border:1px solid #f0dce1;border-radius:15px;background:linear-gradient(145deg,#fff8f3,#f9e8ec);font-size:1.7rem;cursor:pointer;transition:transform .16s,background .16s}.memory-card:hover{transform:translateY(-2px)}.memory-card.revealed,.memory-card.matched{background:#f3edf9}.memory-card.matched{border-color:#bfd5bd}.memory-card:disabled{cursor:default}
+    .birthday{background:linear-gradient(145deg,#fff0f2,#f5effd 55%,#fff8ed)}.birthday-card{max-width:800px;margin:auto;background:#fff;border:1px solid #f1e2e9;border-radius:30px;padding:clamp(25px,6vw,48px);text-align:center;box-shadow:var(--shadow)}.birthday-card h2{font:500 clamp(2rem,5vw,3rem)/1.1 Georgia,serif;margin:10px 0}.birthday-card>p{color:var(--muted)}.countdown{display:flex;justify-content:center;gap:12px;margin:26px 0}.time-box{min-width:78px;padding:12px 10px;border-radius:17px;background:#fff4f5;border:1px solid #f4e3e7}.time-box strong{display:block;font-size:1.7rem;line-height:1.2;color:#bd5e76}.time-box span{font-size:.75rem;color:#786b7e;text-transform:uppercase;letter-spacing:.08em}.gift-button{font-size:1.08rem;background:#cf687f}.gift-button:disabled{opacity:.68;cursor:not-allowed;box-shadow:none;transform:none}.gift-lock-status{font-size:.9rem!important;margin:10px 0!important}.birthday-note{max-width:560px;margin:20px auto 0;padding:20px;border-radius:18px;background:#fff8ed;font:1.08rem/1.65 Georgia,serif;color:#665267;animation:pop .4s ease both}.birthday-note[hidden]{display:none}
+    .choice-row{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:22px 0 10px}.guess-form{display:flex;justify-content:center;gap:8px;margin:22px auto 5px;max-width:340px}.guess-form input{min-width:0;width:150px;border:1px solid #ecd3d8;border-radius:99px;background:#fffaf8;padding:10px 14px;font:inherit;color:var(--ink)}.guess-form input:focus{outline:3px solid #f3cbd3}.tic-board{display:grid;grid-template-columns:repeat(3,minmax(54px,74px));justify-content:center;gap:7px;margin:18px auto 12px}.tic-cell{height:62px;border:1px solid #f0dce1;border-radius:14px;background:#fff8f5;font-size:1.8rem;cursor:pointer}.tic-cell:disabled{cursor:default}.scramble-word{text-align:center;margin:18px auto 4px;font-size:1.65rem;letter-spacing:.3em;color:#bd5e76;font-weight:750}.reaction-pad{display:block;width:100%;height:100px;margin:19px 0 8px;border:0;border-radius:19px;background:#f7e5ea;font-size:1.25rem;font-weight:700;cursor:pointer;transition:background .15s}.reaction-pad.waiting{background:#f4e2bd}.reaction-pad.go{background:#c8e7cc}.reaction-pad:disabled{cursor:wait}
+    .letter{padding:78px 0}.letter-card{max-width:760px;margin:auto;padding:clamp(26px,6vw,54px);background:#fff;border-radius:30px;box-shadow:var(--shadow);position:relative;text-align:center;border:1px solid #f3e7e4}.letter-card:before{content:"✧";position:absolute;top:16px;right:23px;color:#e69aaa;font-size:1.8rem}.letter-card h2{font:500 clamp(2rem,5vw,3rem) Georgia,serif;margin:0 0 18px}.letter-card p{max-width:570px;margin:0 auto 18px;color:#675b6d}.signoff{font:italic 1.15rem Georgia,serif;color:#c26177!important}.surprise{margin-top:10px}
+    footer{text-align:center;padding:25px 15px 38px;color:#8f7e88;font-size:.9rem}.tiny-heart{color:#d26c82}
+    .sprinkle{position:fixed;z-index:9;pointer-events:none;animation:fall 1.9s ease-in forwards;font-size:22px}@keyframes fall{0%{transform:translateY(-10vh) rotate(0);opacity:1}100%{transform:translateY(100vh) rotate(500deg);opacity:0}}
+    @media(max-width:720px){.note-grid{grid-template-columns:repeat(2,1fr)}.game-grid{grid-template-columns:1fr}.hero{min-height:520px}.hero:before{font-size:100px}.hero:after{font-size:125px}}
+    @media(max-width:480px){.wrap{width:min(100% - 26px,1080px)}section{padding:58px 0}.note-grid{grid-template-columns:1fr;gap:12px}.note{min-height:auto;padding:21px}.note p{max-width:34ch}.game{padding:23px 19px}.flower{width:62px;height:62px}.memory-card{height:62px}.hero{padding-top:58px}.hero:before{left:-35px}.hero:after{right:-30px}.guess-form input{width:130px}.tic-board{grid-template-columns:repeat(3,62px)}.tic-cell{height:58px}.countdown{gap:7px}.time-box{min-width:0;flex:1;padding:10px 5px}.time-box strong{font-size:1.4rem}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <span class="eyebrow"><span aria-hidden="true">♡</span> a tiny corner of the internet, just for you</span>
+      <h1>For my <em>favorite</em><br>person</h1>
+      <p class="lead">A little collection of smiles, soft thoughts, and reminders that you make ordinary days feel special.</p>
+      <a class="button" href="#little-things">Come on in <span aria-hidden="true"> ↓</span></a>
+      <span class="scroll-hint">made with a whole lot of love</span>
+    </div>
+  </header>
 
-    <div style="display: flex; justify-content: center;">
-      
-<h1 class="h"></h1>
+  <main>
+    <section id="little-things">
+      <div class="wrap">
+        <div class="section-head"><span class="kicker">little things i adore</span><h2>In case you need a smile ♡</h2><p>Save these for a cloudy day—or read them whenever you like.</p><button class="soft-button" id="compliment-button" type="button">Surprise me with a compliment ✨</button><p class="result" id="compliment-result" aria-live="polite"></p></div>
+        <div class="note-grid">
+          <article class="note"><span class="emoji" aria-hidden="true">🌷</span><p>You make even the most ordinary moments feel like my favorite ones.</p></article>
+          <article class="note"><span class="emoji" aria-hidden="true">☀️</span><p>Your smile is my favorite little plot twist in any day.</p></article>
+          <article class="note"><span class="emoji" aria-hidden="true">🫶</span><p>You never have to be perfect around me. You can just be you.</p></article>
+          <article class="note"><span class="emoji" aria-hidden="true">🌙</span><p>If today was a lot, come rest here for a minute. I’m on your team.</p></article>
+          <article class="note"><span class="emoji" aria-hidden="true">🍓</span><p>I would choose your laugh, your stories, and your company all over again.</p></article>
+          <article class="note"><span class="emoji" aria-hidden="true">✨</span><p>There’s no one else who makes the world feel quite like you do.</p></article>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <section class="memories" id="memories">
+      <div class="wrap">
+        <div class="section-head"><span class="kicker">our little story</span><h2>Memory Lane ♡</h2><p>Some of my favorite things are the little moments we share.</p></div>
+        <div class="timeline">
+          <!-- Personalize these captions with real shared moments, places, or dates. -->
+          <article class="memory"><h3>The little things</h3><p>I love the small conversations and everyday moments that somehow become the best part of my day.</p></article>
+          <article class="memory"><h3>The laughter</h3><p>Whenever we end up laughing together, I wish I could keep that moment in my pocket.</p></article>
+          <article class="memory"><h3>Just being together</h3><p>Even a simple day feels special when I get to share a little piece of it with you.</p></article>
+        </div>
+      </div>
+    </section>
 
-<container class="container">
-  <div class="grid">
-    <div class="item medium">
-      <div class="details">
-       <p>Loving me is like loving heartbreaks, <br> because that's what I'm made of. </p>
+    <section class="play" id="play">
+      <div class="wrap">
+        <div class="section-head"><span class="kicker">a little play break</span><h2>Ten tiny games, just for fun</h2><p>Pick one, play a round, and collect a little happiness.</p></div>
+        <div class="game-grid">
+          <article class="game">
+            <h3>Pick a flower 🌼</h3><p>Tap whichever one feels like you today.</p>
+            <div class="flower-row" aria-label="Choose a flower">
+              <button class="flower" data-message="You bring a little sunshine wherever you go. ☀️" aria-label="Pick the sunflower">🌻</button>
+              <button class="flower" data-message="You deserve a day as lovely and gentle as this flower. 🌷" aria-label="Pick the tulip">🌷</button>
+              <button class="flower" data-message="A tiny reminder: you are loved, exactly as you are. 🌸" aria-label="Pick the blossom">🌸</button>
+            </div>
+            <div class="result" id="flower-result" aria-live="polite">Your message will appear here ♡</div>
+          </article>
+          <article class="game">
+            <div class="game-top"><h3>Catch the hearts 💗</h3><span class="score" id="score">Score: 0</span></div>
+            <p>Start the game, then tap as many hearts as you can in 15 seconds!</p>
+            <div class="heart-field" id="heart-field" aria-label="Heart catching game area"></div>
+            <div class="game-actions"><button class="soft-button" id="start-game">Start the game</button></div>
+            <p class="catch-status" id="game-status" aria-live="polite">Ready when you are!</p>
+          </article>
+          <article class="game mood-game"><h3>How’s your heart today? ☁️</h3><p>Pick a mood and get a tiny note for this moment.</p><div class="mood-row" role="group" aria-label="Choose how you feel"><button class="soft-button mood" data-mood="sunny" aria-pressed="false">😊 Sunny</button><button class="soft-button mood" data-mood="cloudy" aria-pressed="false">😔 Cloudy</button><button class="soft-button mood" data-mood="tired" aria-pressed="false">😴 Tired</button><button class="soft-button mood" data-mood="excited" aria-pressed="false">🥳 Excited</button></div><div class="result" id="mood-result" aria-live="polite">Whatever you’re feeling is okay here. ♡</div></article>
+          <article class="game memory-game"><div class="game-top"><h3>Find the matching pairs 🧠</h3><span class="score" id="match-count">0 / 4 pairs</span></div><p>Flip two cards at a time and find all four matching pairs.</p><div class="memory-board" id="memory-board" aria-label="Memory matching game"></div><div class="game-actions"><button class="soft-button" id="reset-memory" type="button">Shuffle cards</button></div><p class="catch-status" id="memory-status" aria-live="polite">Ready for a tiny brain break?</p></article>
+          <article class="game"><h3>Rock, paper, scissors ✊</h3><p>Choose your move. I’ll play too!</p><div class="choice-row"><button class="soft-button rps" data-choice="rock">✊ Rock</button><button class="soft-button rps" data-choice="paper">✋ Paper</button><button class="soft-button rps" data-choice="scissors">✌️ Scissors</button></div><p class="catch-status" id="rps-result" aria-live="polite">Can you beat me?</p></article>
+          <article class="game"><h3>Guess my number 🔢</h3><p>I picked a number from 1 to 10. Can you find it?</p><form class="guess-form" id="guess-form"><input id="guess-input" type="number" min="1" max="10" inputmode="numeric" placeholder="1–10" aria-label="Guess a number from 1 to 10" required><button class="soft-button" type="submit">Guess!</button></form><p class="catch-status" id="guess-result" aria-live="polite">I’m thinking of one now…</p></article>
+          <article class="game"><h3>Tic-tac-toe ⭕</h3><p>Pick a square. You’re X, I’m O!</p><div class="tic-board" id="tic-board" role="group" aria-label="Tic tac toe board"></div><div class="game-actions"><button class="soft-button" id="tic-reset" type="button">New round</button></div><p class="catch-status" id="tic-status" aria-live="polite">Your turn!</p></article>
+          <article class="game"><h3>Unscramble the word 🔤</h3><p>Can you unmix this cute little word?</p><div class="scramble-word" id="scramble-word" aria-live="polite"></div><form class="guess-form" id="word-form"><input id="word-input" type="text" autocomplete="off" placeholder="Your guess" aria-label="Type the unscrambled word" required><button class="soft-button" type="submit">Check</button></form><p class="catch-status" id="word-result" aria-live="polite">A new word each round!</p><div class="game-actions"><button class="soft-button" id="new-word" type="button">New word</button></div></article>
+          <article class="game"><h3>Ready… steady… tap! ⚡</h3><p>Wait for the green, then tap as quickly as you can.</p><button class="reaction-pad" id="reaction-pad" type="button">Start</button><p class="catch-status" id="reaction-result" aria-live="polite">Test your reaction time!</p></article>
+          <article class="game"><h3>This or that? 💭</h3><p id="would-question">Pick your perfect cozy day:</p><div class="choice-row"><button class="soft-button would-choice">🌧️ Rainy movie day</button><button class="soft-button would-choice">☀️ Sunny picnic</button></div><p class="catch-status" id="would-result" aria-live="polite">There are no wrong answers!</p><div class="game-actions"><button class="soft-button" id="new-would" type="button">Another question</button></div></article>
+        </div>
       </div>
-    </div>
-    <div class="item large">
-      <div class="details">
-        Obstacles do not block the path, they are the path. – "Zen Proverb"
-      </div>
-    </div>
-    <div class="item medium">
-      <div class="details">
-        If I love you I won’t give up easily. Leaving is my last option but if you push me away I will walk away
-        knowing I gave it my all.
-      </div>
-    </div>
-    <div class="item large">
-      <div class="details">
-        I would break my own heart to protect yours.
-      </div>
-    </div>
-    <div class="item medium">
-      <div class="details">
-        “The best and most beautiful things in the world cannot be seen or even touched. They must be felt with the heart.” - Helen Keller
-      </div>
-    </div>
-    <div class="item large">
-      <div class="details">
-        And when you're tired, don't think twice before falling into my arms. <i> I'm tired too, but I'll never run out of love for you. </i>
-      </div>
-    </div>
-    <div class="item medium">
-      <div class="details">
-       I'll always be the first one to open my arms for you, and the last one you'll choose to hug.
-      </div>
-    </div>
-    <div class="item large">
-      <div class="details">
-        “Everything will be okay in the end. If it’s not okay, then it’s not the end.” - Ed sheeran
-      </div>
-    </div>
-    <div class="item medium">
-      <div class="details">
-        Never let your heart end something you don't want to end.
-      </div>
-    </div>
-    <div class="item large">
-      <div class="details">
-        We are all broken, that’s how the light gets in. – Ernest Hemingway
-      </div>
-    </div>
-    <div class="item medium">
-      <div class="details">
-        “You are the brightest star in my sky” — Susan Hayes
-      </div>
-    </div>
-    <div class="item large">
-      <div class="details">
-        “There are plenty of ways to die, but only love can kill and keep you alive to feel it.” ― Leo Christopher
-      </div>
-    </div>
-    <div class="item medium">
-      <div class="details">
-        My heart cannot find rest while you are gone, Everything has lost its color since you are not here, I miss you,<i> in short I just feel I am nothing without you.</i>
-      </div>
-    </div>
-    <div class="item large">
-      <div class="details">
-        No I'm not in a relationship <br> It's just... I'm in love with someone I can't unlove <br> And that I also can't be with.... And it's killing me... <br>I want to be with this person but I can't... <br>Thought, I want to... I really... want to.
-      </div>
-    </div>
-    <div class="item medium">
-      <div class="details">
-        If i knew I feel this sad... If I knew I feel this lonely...<br> I would never have wanted a HEART.
-      </div>
-    </div>
-    <div class="item medium">
-      <div class="details">
-        We meet again...<br> May be I become biscuit in your tea.....We meet again<br>Maybe I become that which you choose....We meet again<br>Maybe I will be that smile on your face.....<br>I meet you again <br>I meet you again.             -Ms 
-      </div>
-    </div>
-  </div>
-</container>
-<div class="icons">
-<a target="_blank" href="https://www.instagram.com/mr_doc069">
-  <img class=“sm_icon“ src="https://raw.githubusercontent.com/mrdocxx/assets-images/main/instagram.png">
- </a>
-</div>
+    </section>
 
-<!-- <div style="position: relative; left: 500px; top: 480px;">
-  <h1>Click here👇</h1>
-  <button class="buttonstyle1"> For You.....❤️ </button>
-</div>
- -->
+    <section class="birthday" id="birthday">
+      <div class="wrap"><div class="birthday-card">
+        <span class="kicker">a date worth celebrating</span>
+        <h2>Your birthday is coming! 🎂</h2>
+        <p>Counting down to August 6 — your very own day to feel extra loved.</p>
+        <div class="countdown" aria-label="Countdown to her birthday">
+          <div class="time-box"><strong id="birthday-days">0</strong><span>days</span></div>
+          <div class="time-box"><strong id="birthday-hours">00</strong><span>hours</span></div>
+          <div class="time-box"><strong id="birthday-minutes">00</strong><span>minutes</span></div>
+          <div class="time-box"><strong id="birthday-seconds">00</strong><span>seconds</span></div>
+        </div>
+        <button class="button gift-button" id="birthday-gift" type="button" aria-expanded="false" aria-controls="birthday-note" disabled>🔒 Opens August 5 at 11:59 PM</button>
+        <p class="gift-lock-status" id="gift-lock-status" aria-live="polite">Your surprise is tucked away until August 5 at 11:59 PM. ♡</p>
+        <p class="birthday-note" id="birthday-note" hidden>Happy birthday to my favorite person! I hope this year brings you as much joy, laughter, and warmth as you bring into my life. You deserve to feel celebrated today and every day. I love you ♡</p>
+      </div></div>
+    </section>
 
+    <section class="letter" id="note">
+      <div class="wrap"><div class="letter-card">
+        <span class="kicker">one last thing</span><h2>A note for you</h2>
+        <p>I hope this little page reminds you how loved you are. Thank you for being exactly who you are, for all the small moments we share, and for making my heart feel at home.</p>
+        <p class="signoff">Always cheering for you ♡</p>
+        <button class="button surprise" id="surprise">Send a little sparkle ✨</button>
+      </div></div>
+    </section>
+  </main>
+  <footer>made just for you <span class="tiny-heart">♥</span></footer>
+  <script>
+      document.querySelectorAll('.flower').forEach(button=>button.addEventListener('click',()=>{document.getElementById('flower-result').textContent=button.dataset.message}));
+      const compliments=['You have the kind of smile that makes a room feel softer.','You make being yourself look like the loveliest thing in the world.','The world got a little brighter when you showed up in it.','You are someone’s favorite reason to smile—and definitely mine.','Your laugh deserves its own little soundtrack.'];
+      document.getElementById('compliment-button').addEventListener('click',()=>{const box=document.getElementById('compliment-result');let next=compliments[Math.floor(Math.random()*compliments.length)];if(box.dataset.last===next)next=compliments[(compliments.indexOf(next)+1)%compliments.length];box.dataset.last=next;box.textContent=next});
+      const moodNotes={sunny:'Keep that sunshine close—you make happy moments even sweeter. ☀️',cloudy:'No need to fix the feeling. Take it gently, one little moment at a time. I’m here for you. 🌧️',tired:'Permission to rest, get cozy, and let the world wait a bit. You’ve done enough for today. 🧸',excited:'I love seeing you light up! Tell me everything—I’m ready for the happy recap. ✨'};
+      document.querySelectorAll('.mood').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.mood').forEach(item=>item.setAttribute('aria-pressed','false'));button.setAttribute('aria-pressed','true');document.getElementById('mood-result').textContent=moodNotes[button.dataset.mood]}));
+    const field=document.getElementById('heart-field'),scoreLabel=document.getElementById('score'),statusLabel=document.getElementById('game-status'),startButton=document.getElementById('start-game');
+    let score=0,playing=false,spawnTimer,gameTimer;
+    function endGame(){playing=false;clearInterval(spawnTimer);clearTimeout(gameTimer);field.replaceChildren();statusLabel.textContent=`Time! You caught ${score} ${score===1?'heart':'hearts'} — sending every one right back to you. 💗`;startButton.disabled=false;startButton.textContent='Play again';}
+    function addHeart(){if(!playing)return;const heart=document.createElement('button');heart.className='catch-heart';heart.type='button';heart.textContent=['💗','💖','💕','💘'][Math.floor(Math.random()*4)];heart.setAttribute('aria-label','Catch a heart');heart.style.left=`${5+Math.random()*82}%`;heart.style.top=`${8+Math.random()*65}%`;heart.addEventListener('click',()=>{if(!playing)return;score++;scoreLabel.textContent=`Score: ${score}`;heart.remove()},{once:true});field.append(heart);setTimeout(()=>heart.remove(),1150);}
+    startButton.addEventListener('click',()=>{if(playing)return;score=0;scoreLabel.textContent='Score: 0';playing=true;startButton.disabled=true;statusLabel.textContent='Go go go! 💞';addHeart();spawnTimer=setInterval(addHeart,650);gameTimer=setTimeout(endGame,15000)});
+      const memoryEmojis=['🌷','🍓','🌙','🦋'];let openCards=[],locked=false,matches=0;
+      function setupMemory(){const board=document.getElementById('memory-board');board.replaceChildren();openCards=[];locked=false;matches=0;document.getElementById('match-count').textContent='0 / 4 pairs';document.getElementById('memory-status').textContent='Ready for a tiny brain break?';[...memoryEmojis,...memoryEmojis].sort(()=>Math.random()-.5).forEach((emoji,index)=>{const card=document.createElement('button');card.className='memory-card';card.type='button';card.textContent='?';card.setAttribute('aria-label',`Hidden card ${index+1}`);card.dataset.emoji=emoji;card.addEventListener('click',()=>{if(locked||card.classList.contains('revealed')||card.classList.contains('matched'))return;card.textContent=emoji;card.classList.add('revealed');card.setAttribute('aria-label',emoji);openCards.push(card);if(openCards.length===2){const [a,b]=openCards;if(a.dataset.emoji===b.dataset.emoji){a.classList.replace('revealed','matched');b.classList.replace('revealed','matched');a.disabled=b.disabled=true;matches++;document.getElementById('match-count').textContent=`${matches} / 4 pairs`;openCards=[];if(matches===4)document.getElementById('memory-status').textContent='You did it! Your brain is cute and clever. 🎉'}else{locked=true;setTimeout(()=>{for(const item of openCards){item.textContent='?';item.classList.remove('revealed');item.setAttribute('aria-label','Hidden card')}openCards=[];locked=false},750)}}});board.append(card)})}
+      document.getElementById('reset-memory').addEventListener('click',setupMemory);setupMemory();
+      const rpsMoves=['rock','paper','scissors'];
+      document.querySelectorAll('.rps').forEach(button=>button.addEventListener('click',()=>{const you=button.dataset.choice,me=rpsMoves[Math.floor(Math.random()*3)];let result=you===me?'It’s a tie! Great minds think alike.':(you==='rock'&&me==='scissors'||you==='paper'&&me==='rock'||you==='scissors'&&me==='paper')?'You win this round! I’m proud of you. 🎉':'I win this one, but you’re still my favorite. 💗';document.getElementById('rps-result').textContent=`You picked ${you}; I picked ${me}. ${result}`}));
+      let secretNumber=Math.floor(Math.random()*10)+1;
+      document.getElementById('guess-form').addEventListener('submit',event=>{event.preventDefault();const input=document.getElementById('guess-input'),guess=Number(input.value),result=document.getElementById('guess-result');if(guess===secretNumber){result.textContent='You got it! You’re a mind reader. ✨';secretNumber=Math.floor(Math.random()*10)+1}else result.textContent=guess<secretNumber?'A little higher! Try again. ⬆️':'A little lower! Try again. ⬇️';input.select()});
+      let ticCells=Array(9).fill(''),ticOver=false;
+      const winLines=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+      function ticWinner(){return winLines.find(line=>line.every(i=>ticCells[i]&&ticCells[i]===ticCells[line[0]]))?.map(i=>ticCells[i])[0]||''}
+      function drawTic(){const board=document.getElementById('tic-board');board.replaceChildren();ticCells.forEach((mark,index)=>{const cell=document.createElement('button');cell.className='tic-cell';cell.type='button';cell.textContent=mark;cell.setAttribute('aria-label',`Square ${index+1}${mark?`: ${mark}`:''}`);cell.disabled=!!mark||ticOver;cell.addEventListener('click',()=>ticMove(index));board.append(cell)})}
+      function ticMove(index){if(ticOver||ticCells[index])return;ticCells[index]='X';if(ticWinner()){ticOver=true;document.getElementById('tic-status').textContent='You win! I knew you were clever. 🎉'}else if(ticCells.every(Boolean)){ticOver=true;document.getElementById('tic-status').textContent='A draw! That was a good match. 💗'}else{const free=ticCells.map((v,i)=>v?null:i).filter(i=>i!==null);ticCells[free[Math.floor(Math.random()*free.length)]]='O';if(ticWinner()){ticOver=true;document.getElementById('tic-status').textContent='I got lucky this time. Rematch? 😊'}else if(ticCells.every(Boolean)){ticOver=true;document.getElementById('tic-status').textContent='A draw! That was a good match. 💗'}else document.getElementById('tic-status').textContent='Your turn!'}drawTic()}
+      document.getElementById('tic-reset').addEventListener('click',()=>{ticCells=Array(9).fill('');ticOver=false;document.getElementById('tic-status').textContent='Your turn!';drawTic()});drawTic();
+      const words=['smile','sweet','heart','sunny','cuddle','flower','sparkle','cookie'];let answer='';
+      function newWord(){answer=words[Math.floor(Math.random()*words.length)];let mixed;do{mixed=answer.split('').sort(()=>Math.random()-.5).join('')}while(mixed===answer&&answer.length>1);document.getElementById('scramble-word').textContent=mixed.toUpperCase();document.getElementById('word-result').textContent='A new word each round!';document.getElementById('word-input').value=''}
+      document.getElementById('word-form').addEventListener('submit',event=>{event.preventDefault();const input=document.getElementById('word-input');if(input.value.trim().toLowerCase()===answer){document.getElementById('word-result').textContent='You unscrambled it! You’re so good at this. 🌟';setTimeout(newWord,1300)}else document.getElementById('word-result').textContent='Almost! Give it another try. 💭'});
+      document.getElementById('new-word').addEventListener('click',newWord);newWord();
+      const reactionPad=document.getElementById('reaction-pad'),reactionResult=document.getElementById('reaction-result');let reactionTimer,reactionStart=0,reactionState='ready';
+      reactionPad.addEventListener('click',()=>{if(reactionState==='ready'||reactionState==='done'){reactionState='waiting';reactionPad.className='reaction-pad waiting';reactionPad.textContent='Wait for green…';reactionResult.textContent='';reactionPad.disabled=true;reactionTimer=setTimeout(()=>{reactionState='go';reactionStart=performance.now();reactionPad.disabled=false;reactionPad.className='reaction-pad go';reactionPad.textContent='TAP NOW!'},900+Math.random()*2200)}else if(reactionState==='waiting'){clearTimeout(reactionTimer);reactionState='done';reactionPad.disabled=false;reactionPad.className='reaction-pad';reactionPad.textContent='Try again';reactionResult.textContent='Too soon! Wait until it turns green 😄'}else if(reactionState==='go'){const ms=Math.round(performance.now()-reactionStart);reactionState='done';reactionPad.className='reaction-pad';reactionPad.textContent='Play again';reactionResult.textContent=`${ms} ms! ${ms<300?'Lightning fast! ⚡':'Nice reflexes! 💗'}`}});
+      const choices=[['🌧️ Rainy movie day','☀️ Sunny picnic'],['🍓 Strawberries','🍰 Chocolate cake'],['🌅 Sunrise','🌇 Sunset'],['🐱 Cats','🐶 Dogs'],['🎶 Sing together','💃 Dance together']];let choiceIndex=0;
+      function showChoice(){const pair=choices[choiceIndex];document.getElementById('would-question').textContent='Pick your favorite:';document.querySelectorAll('.would-choice').forEach((button,i)=>{button.textContent=pair[i];button.disabled=false}) ;document.getElementById('would-result').textContent='There are no wrong answers!'}
+      document.querySelectorAll('.would-choice').forEach(button=>button.addEventListener('click',()=>{document.getElementById('would-result').textContent=`Excellent choice: ${button.textContent}! I’d have fun with you either way. 💕`;document.querySelectorAll('.would-choice').forEach(item=>item.disabled=true)}));
+      document.getElementById('new-would').addEventListener('click',()=>{choiceIndex=(choiceIndex+1)%choices.length;showChoice()});showChoice();
+      const birthdayDays=document.getElementById('birthday-days'),birthdayHours=document.getElementById('birthday-hours'),birthdayMinutes=document.getElementById('birthday-minutes'),birthdaySeconds=document.getElementById('birthday-seconds');
+      function updateBirthdayCountdown(){const now=new Date();let year=now.getFullYear(),nextBirthday=new Date(year,7,6,0,0,0);if(now>=nextBirthday)nextBirthday=new Date(year+1,7,6,0,0,0);let remaining=Math.max(0,nextBirthday-now);const day=86400000,hour=3600000,minute=60000;birthdayDays.textContent=Math.floor(remaining/day);remaining%=day;birthdayHours.textContent=String(Math.floor(remaining/hour)).padStart(2,'0');remaining%=hour;birthdayMinutes.textContent=String(Math.floor(remaining/minute)).padStart(2,'0');birthdaySeconds.textContent=String(Math.floor((remaining%minute)/1000)).padStart(2,'0');}
+      updateBirthdayCountdown();setInterval(updateBirthdayCountdown,1000);
+      const birthdayGift=document.getElementById('birthday-gift'),giftLockStatus=document.getElementById('gift-lock-status'),birthdayNote=document.getElementById('birthday-note');let giftUnlocked=false;
+      function updateGiftLock(){const now=new Date();let year=now.getFullYear(),unlockAt=new Date(year,7,5,23,59,0),birthdayAt=new Date(year,7,6,0,0,0);if(now>=birthdayAt){year++;unlockAt=new Date(year,7,5,23,59,0);birthdayAt=new Date(year,7,6,0,0,0)}giftUnlocked=now>=unlockAt&&now<birthdayAt;birthdayGift.disabled=!giftUnlocked;if(giftUnlocked){birthdayGift.textContent=birthdayNote.hidden?'🎁 Open your birthday surprise':'💝 Your surprise is open!';giftLockStatus.textContent='It’s time! Your birthday surprise is ready. ♡'}else{birthdayGift.textContent='🔒 Opens August 5 at 11:59 PM';giftLockStatus.textContent='Your surprise is tucked away until August 5 at 11:59 PM. ♡'}}
+      birthdayGift.addEventListener('click',event=>{if(!giftUnlocked)return;const open=birthdayNote.hidden;birthdayNote.hidden=!open;event.currentTarget.setAttribute('aria-expanded',String(open));event.currentTarget.textContent=open?'💝 Your surprise is open!':'🎁 Open your birthday surprise'});updateGiftLock();setInterval(updateGiftLock,1000);
+      document.getElementById('surprise').addEventListener('click',()=>{const icons=['💗','✨','🌸','💖','💕','🌷'];for(let i=0;i<34;i++){const item=document.createElement('span');item.className='sprinkle';item.textContent=icons[Math.floor(Math.random()*icons.length)];item.style.left=`${Math.random()*100}vw`;item.style.top=`${-10-Math.random()*30}vh`;item.style.animationDelay=`${Math.random()*.7}s`;document.body.append(item);setTimeout(()=>item.remove(),2800)}});
+  </script>
 </body>
 </html>
