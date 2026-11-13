@@ -361,6 +361,50 @@
       function updateGiftLock(){const now=new Date();let year=now.getFullYear(),unlockAt=new Date(year,7,5,23,59,0),birthdayAt=new Date(year,7,6,0,0,0);if(now>=birthdayAt){year++;unlockAt=new Date(year,7,5,23,59,0);birthdayAt=new Date(year,7,6,0,0,0)}giftUnlocked=now>=unlockAt&&now<birthdayAt;birthdayGift.disabled=!giftUnlocked;if(giftUnlocked){birthdayGift.textContent=birthdayNote.hidden?'🎁 Open your birthday surprise':'💝 Your surprise is open!';giftLockStatus.textContent='It’s time! Your birthday surprise is ready. ♡'}else{birthdayGift.textContent='🔒 Opens August 5 at 11:59 PM';giftLockStatus.textContent='Your surprise is tucked away until August 5 at 11:59 PM. ♡'}}
       birthdayGift.addEventListener('click',event=>{if(!giftUnlocked)return;const open=birthdayNote.hidden;birthdayNote.hidden=!open;event.currentTarget.setAttribute('aria-expanded',String(open));event.currentTarget.textContent=open?'💝 Your surprise is open!':'🎁 Open your birthday surprise'});updateGiftLock();setInterval(updateGiftLock,1000);
       document.getElementById('surprise').addEventListener('click',()=>{const icons=['💗','✨','🌸','💖','💕','🌷'];for(let i=0;i<34;i++){const item=document.createElement('span');item.className='sprinkle';item.textContent=icons[Math.floor(Math.random()*icons.length)];item.style.left=`${Math.random()*100}vw`;item.style.top=`${-10-Math.random()*30}vh`;item.style.animationDelay=`${Math.random()*.7}s`;document.body.append(item);setTimeout(()=>item.remove(),2800)}});
+
+// Come to me - floating heart surprise
+const comeButton = document.getElementById('come-button');
+const comeResponse = document.getElementById('come-response');
+const comeCard = document.getElementById('come-card');
+
+comeButton.addEventListener('click', () => {
+  comeResponse.hidden = false;
+  comeButton.textContent = 'A hug is waiting for you ♡';
+  comeButton.disabled = true;
+
+  const hearts = ['♡', '♥', '💕', '💗', '♡'];
+
+  for (let i = 0; i < 22; i++) {
+    const heart = document.createElement('span');
+
+    heart.className = 'come-floating-heart';
+    heart.textContent =
+      hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.setProperty(
+      '--heart-left',
+      `${Math.random() * 90 + 5}%`
+    );
+
+    heart.style.setProperty(
+      '--heart-size',
+      `${14 + Math.random() * 17}px`
+    );
+
+    heart.style.setProperty(
+      '--heart-duration',
+      `${2.5 + Math.random() * 2}s`
+    );
+
+    heart.style.animationDelay = `${Math.random() * 0.7}s`;
+
+    comeCard.appendChild(heart);
+
+    heart.addEventListener('animationend', () => {
+      heart.remove();
+    });
+  }
+});
   </script>
 </body>
 </html>
