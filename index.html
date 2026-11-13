@@ -15,6 +15,154 @@
   <meta name="description" content="A little pocket of sunshine, made just for you.">
   <title>A Little Something for You ♡</title>
   <style>
+
+/* Come to me - little reminder section */
+.come-to-me {
+  background: linear-gradient(135deg, #fff8f3, #f9e8ec 55%, #f2edfb);
+  padding: 65px 0;
+}
+
+.come-card {
+  max-width: 720px;
+  margin: auto;
+  padding: clamp(28px, 6vw, 48px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  background: #fff;
+  border: 1px solid #f1e2e9;
+  box-shadow: var(--shadow);
+}
+
+.come-flower {
+  display: block;
+  font-size: 2rem;
+  color: #e69aaa;
+  margin-bottom: 12px;
+}
+
+.come-card h2 {
+  font: 500 clamp(2rem, 5vw, 2.8rem)/1.15 Georgia, serif;
+  margin: 13px 0;
+  color: var(--ink);
+}
+
+.come-text {
+  max-width: 430px;
+  margin: 0 auto 25px;
+  color: var(--muted);
+}
+
+.come-button {
+  background: #cf687f;
+  min-width: 155px;
+}
+
+.come-response {
+  max-width: 470px;
+  margin: 28px auto 0;
+  animation: comeReveal .7s ease both;
+}
+
+.come-response[hidden] {
+  display: none;
+}
+
+.response-heart {
+  display: block;
+  font-size: 2rem;
+  color: #e77d91;
+  animation: heartBeat 1.2s ease infinite;
+}
+
+.come-response h3 {
+  font: 500 clamp(1.7rem, 4vw, 2.2rem) Georgia, serif;
+  color: #c26177;
+  margin: 10px 0;
+}
+
+.come-response p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 10px auto;
+}
+
+.come-signoff {
+  display: block;
+  margin-top: 17px;
+  color: #c26177;
+  font: italic 1.05rem Georgia, serif;
+}
+
+.come-footer {
+  display: block;
+  margin-top: 30px;
+  color: #a68b98;
+  font-size: .82rem;
+  letter-spacing: .04em;
+}
+
+.come-floating-heart {
+  position: absolute;
+  bottom: -25px;
+  left: var(--heart-left);
+  color: #e77d91;
+  font-size: var(--heart-size);
+  pointer-events: none;
+  z-index: 2;
+  animation: comeFloat var(--heart-duration) ease-out forwards;
+}
+
+@keyframes comeFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg) scale(.6);
+  }
+  15% {
+    opacity: .9;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-300px) rotate(35deg) scale(1.2);
+  }
+}
+
+@keyframes comeReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heartBeat {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 480px) {
+  .come-to-me {
+    padding: 45px 0;
+  }
+
+  .come-card {
+    padding: 30px 20px;
+    border-radius: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .come-floating-heart,
+  .come-response,
+  .response-heart {
+    animation: none !important;
+  }
+}
     :root{--ink:#382c43;--muted:#756a7e;--rose:#e77d91;--pink:#f9dce2;--cream:#fff8f3;--lav:#eee7fb;--green:#dce9d9;--white:#fff;--shadow:0 18px 50px #67465b1c}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
     button{font:inherit;color:inherit}a{color:inherit}.wrap{width:min(1080px,calc(100% - 36px));margin:auto}
