@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3S8TREBJF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q3S8TREBJF');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f3">
+  <meta name="description" content="A little pocket of sunshine, made just for you.">
+  <title>A Little Something for You ♡</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <span class="eyebrow"><span aria-hidden="true">♡</span> a tiny corner of the internet, just for you</span>
+      <h1>For my <em>favorite</em><br>person</h1>
+      <p class="lead">A little collection of smiles, soft thoughts, and reminders that you make ordinary days feel special.</p>
+      <a class="button" href="#little-things">Come on in <span aria-hidden="true"> ↓</span></a>
+      <span class="scroll-hint">made with a whole lot of love</span>
+    </div>
+  </header>
+  <main>
+    <section id="little-things">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">little things i adore</span>
+          <h2>In case you need a smile ♡</h2>
+          <p>Save these for a cloudy day—or read them whenever you like.</p>
+          <button class="soft-button" id="compliment-button" type="button">Surprise me with a compliment ✨</button>
+          <p class="result" id="compliment-result" aria-live="polite"></p>
+        </div>
+        <div class="note-grid">
+          <article class="note"><span class="emoji" aria-hidden="true">🌷</span><p>You make even the most ordinary moments feel like my favorite ones.</p></article>
+          <article class="note"><span class="emoji" aria-hidden="true">☀️</span><p>Your smile is my favorite little plot twist in any day.</p></article>
+          <article class="note"><span class="emoji" aria-hidden="true">🫶</span><p>You never have to be perfect around me. You can just be you.</p></article>
+          <article class="note"><span class="emoji" aria-hidden="true">🌙</span><p>If today was a lot, come rest here for a minute. I’m on your team.</p></article>
+          <article class="note"><span class="emoji" aria-hidden="true">🍓</span><p>I would choose your laugh, your stories, and your company all over again.</p></article>
+          <article class="note"><span class="emoji" aria-hidden="true">✨</span><p>There’s no one else who makes the world feel quite like you do.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="memories" id="memories">
+      <div class="wrap">
+        <div class="section-head"><span class="kicker">our little story</span><h2>Memory Lane ♡</h2><p>Some of my favorite things are the little moments we share.</p></div>
+        <div class="timeline">
+          <!-- Personalize these captions with real shared moments, places, or dates. -->
+          <article class="memory"><h3>The little things</h3><p>I love the small conversations and everyday moments that somehow become the best part of my day.</p></article>
+          <article class="memory"><h3>The laughter</h3><p>Whenever we end up laughing together, I wish I could keep that moment in my pocket.</p></article>
+          <article class="memory"><h3>Just being together</h3><p>Even a simple day feels special when I get to share a little piece of it with you.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="play" id="play">
+      <div class="wrap">
+        <div class="section-head"><span class="kicker">a little play break</span><h2>Ten tiny games, just for fun</h2><p>Pick one, play a round, and collect a little happiness.</p></div>
+        <div class="game-grid">
+          <article class="game">
+            <h3>Pick a flower 🌼</h3><p>Tap whichever one feels like you today.</p>
+            <div class="flower-row" aria-label="Choose a flower">
+              <button class="flower" type="button" data-message="You bring a little sunshine wherever you go. ☀️" aria-label="Pick the sunflower">🌻</button>
+              <button class="flower" type="button" data-message="You deserve a day as lovely and gentle as this flower. 🌷" aria-label="Pick the tulip">🌷</button>
+              <button class="flower" type="button" data-message="A tiny reminder: you are loved, exactly as you are. 🌸" aria-label="Pick the blossom">🌸</button>
+            </div>
+            <div class="result" id="flower-result" aria-live="polite">Your message will appear here ♡</div>
+          </article>
+          <article class="game">
+            <div class="game-top"><h3>Catch the hearts 💗</h3><span class="score" id="score">Score: 0</span></div>
+            <p>Start the game, then tap as many hearts as you can in 15 seconds!</p>
+            <div class="heart-field" id="heart-field" aria-label="Heart catching game area"></div>
+            <div class="game-actions"><button class="soft-button" id="start-game" type="button">Start the game</button></div>
+            <p class="catch-status" id="game-status" aria-live="polite">Ready when you are!</p>
+          </article>
+          <article class="game mood-game">
+            <h3>How’s your heart today? ☁️</h3><p>Pick a mood and get a tiny note for this moment.</p>
+            <div class="mood-row" role="group" aria-label="Choose how you feel">
+              <button class="soft-button mood" type="button" data-mood="sunny" aria-pressed="false">😊 Sunny</button>
+              <button class="soft-button mood" type="button" data-mood="cloudy" aria-pressed="false">😔 Cloudy</button>
+              <button class="soft-button mood" type="button" data-mood="tired" aria-pressed="false">😴 Tired</button>
+              <button class="soft-button mood" type="button" data-mood="excited" aria-pressed="false">🥳 Excited</button>
+            </div>
+            <div class="result" id="mood-result" aria-live="polite">Whatever you’re feeling is okay here. ♡</div>
+          </article>
+          <article class="game memory-game">
+            <div class="game-top"><h3>Find the matching pairs 🧠</h3><span class="score" id="match-count">0 / 4 pairs</span></div>
+            <p>Flip two cards at a time and find all four matching pairs.</p>
+            <div class="memory-board" id="memory-board" aria-label="Memory matching game"></div>
+            <div class="game-actions"><button class="soft-button" id="reset-memory" type="button">Shuffle cards</button></div>
+            <p class="catch-status" id="memory-status" aria-live="polite">Ready for a tiny brain break?</p>
+          </article>
+          <article class="game">
+            <h3>Rock, paper, scissors ✊</h3><p>Choose your move. I’ll play too!</p>
+            <div class="choice-row">
+              <button class="soft-button rps" type="button" data-choice="rock">✊ Rock</button>
+              <button class="soft-button rps" type="button" data-choice="paper">✋ Paper</button>
+              <button class="soft-button rps" type="button" data-choice="scissors">✌️ Scissors</button>
+            </div>
+            <p class="catch-status" id="rps-result" aria-live="polite">Can you beat me?</p>
+          </article>
+          <article class="game">
+            <h3>Guess my number 🔢</h3><p>I picked a number from 1 to 10. Can you find it?</p>
+            <form class="guess-form" id="guess-form">
+              <input id="guess-input" type="number" min="1" max="10" inputmode="numeric" placeholder="1–10" aria-label="Guess a number from 1 to 10" required>
+              <button class="soft-button" type="submit">Guess!</button>
+            </form>
+            <p class="catch-status" id="guess-result" aria-live="polite">I’m thinking of one now…</p>
+          </article>
+          <article class="game">
+            <h3>Tic-tac-toe ⭕</h3><p>Pick a square. You’re X, I’m O!</p>
+            <div class="tic-board" id="tic-board" role="group" aria-label="Tic tac toe board"></div>
+            <div class="game-actions"><button class="soft-button" id="tic-reset" type="button">New round</button></div>
+            <p class="catch-status" id="tic-status" aria-live="polite">Your turn!</p>
+          </article>
+          <article class="game">
+            <h3>Unscramble the word 🔤</h3><p>Can you unmix this cute little word?</p>
+            <div class="scramble-word" id="scramble-word" aria-live="polite"></div>
+            <form class="guess-form" id="word-form">
+              <input id="word-input" type="text" autocomplete="off" placeholder="Your guess" aria-label="Type the unscrambled word" required>
+              <button class="soft-button" type="submit">Check</button>
+            </form>
+            <p class="catch-status" id="word-result" aria-live="polite">A new word each round!</p>
+            <div class="game-actions"><button class="soft-button" id="new-word" type="button">New word</button></div>
+          </article>
+          <article class="game">
+            <h3>Ready… steady… tap! ⚡</h3><p>Wait for the green, then tap as quickly as you can.</p>
+            <button class="reaction-pad" id="reaction-pad" type="button">Start</button>
+            <p class="catch-status" id="reaction-result" aria-live="polite">Test your reaction time!</p>
+          </article>
+          <article class="game">
+            <h3>This or that? 💭</h3><p id="would-question">Pick your perfect cozy day:</p>
+            <div class="choice-row">
+              <button class="soft-button would-choice" type="button">🌧️ Rainy movie day</button>
+              <button class="soft-button would-choice" type="button">☀️ Sunny picnic</button>
+            </div>
+            <p class="catch-status" id="would-result" aria-live="polite">There are no wrong answers!</p>
+            <div class="game-actions"><button class="soft-button" id="new-would" type="button">Another question</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="come-to-me" id="come-to-me">
+      <div class="wrap">
+        <div class="come-card" id="come-card">
+          <span class="come-flower">✿</span>
+          <span class="kicker">a little reminder</span>
+          <h2>Feeling a little alone? ♡</h2>
+          <p class="come-text">If today feels a little heavy, or you just wish someone was beside you...</p>
+          <button class="button come-button" id="come-button" type="button">Come to me ♡</button>
+          <div class="come-response" id="come-response" hidden>
+            <span class="response-heart">♥</span>
+            <h3>Then come to me. ♡</h3>
+            <p>I'll always make room for you. No matter the day, the mood, or the reason. You don't have to feel alone when you have me.</p>
+            <span class="come-signoff">Your safe place, always ♡</span>
+          </div>
+          <span class="come-footer">a little hug, whenever you need one ♡</span>
+        </div>
+      </div>
+    </section>
+    <section class="birthday" id="birthday">
+      <div class="wrap">
+        <div class="birthday-card">
+          <span class="kicker">a date worth celebrating</span>
+          <h2>Your birthday is coming! 🎂</h2>
+          <p>Counting down to August 6 — your very own day to feel extra loved.</p>
+          <div class="countdown" aria-label="Countdown to her birthday">
+            <div class="time-box"><strong id="birthday-days">0</strong><span>days</span></div>
+            <div class="time-box"><strong id="birthday-hours">00</strong><span>hours</span></div>
+            <div class="time-box"><strong id="birthday-minutes">00</strong><span>minutes</span></div>
+            <div class="time-box"><strong id="birthday-seconds">00</strong><span>seconds</span></div>
+          </div>
+          <button class="button gift-button" id="birthday-gift" type="button" aria-expanded="false" aria-controls="birthday-note" disabled>🔒 Opens August 5 at 11:59 PM</button>
+          <p class="gift-lock-status" id="gift-lock-status" aria-live="polite">Your surprise is tucked away until August 5 at 11:59 PM. ♡</p>
+          <p class="birthday-note" id="birthday-note" hidden>Happy birthday to my favorite person! I hope this year brings you as much joy, laughter, and warmth as you bring into my life. You deserve to feel celebrated today and every day. I love you ♡</p>
+        </div>
+      </div>
+    </section>
+    <section class="letter" id="note">
+      <div class="wrap">
+        <div class="letter-card">
+          <span class="kicker">one last thing</span>
+          <h2>A note for you</h2>
+          <p>I hope this little page reminds you how loved you are. Thank you for being exactly who you are, for all the small moments we share, and for making my heart feel at home.</p>
+          <p class="signoff">Always cheering for you ♡</p>
+          <button class="button surprise" id="surprise" type="button">Send a little sparkle ✨</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>made just for you <span class="tiny-heart">♥</span></footer>
+</body>
+</html>
